@@ -1,0 +1,14 @@
+[
+    {
+        "itemName": "hello-world",
+        "size": ["S", "M", "L"],
+        "inStock": true,
+        "category": "M"
+    },
+    {
+        "itemName": "react",
+        "size": ["S", "M", "L"],
+        "inStock": true,
+        "category": "W"
+    }
+]
