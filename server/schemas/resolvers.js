@@ -1,43 +1,26 @@
-const { Profile } = require('../models');
+const { Shirt } = require('../models');
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
+    findAllShirts: async () => {
+      return Shirt.find();
     },
 
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+    findOneShirt: async (parent, { shirtId }) => {
+      return Shirt.findOne({ _id: shirtId });
     },
   },
 
-  Mutation: {
-    addProfile: async (parent, { name }) => {
-      return Profile.create({ name });
-    },
-    addSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        {
-          $addToSet: { skills: skill },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
-    },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
-    },
-    removeSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        { $pull: { skills: skill } },
-        { new: true }
-      );
-    },
-  },
+
+  // Mutation: {
+  //   addShirt: async (parent, { itemName, category}) => {
+  //     return Shirt.create({ itemName, category });
+  //   },
+
+  //   removeShirt: async (parent, { id }) => {
+  //     return Shirt.findOneAndDelete({ _id: id });
+  //   },
+  // },
 };
 
 module.exports = resolvers;
