@@ -7,13 +7,11 @@ const shirtSchema = new Schema({
     unique: true,
     trim: true,
   },
-  size: [
+  size: 
     {
-      type: String,
-      default: "M",
-      trim: true,
+      type: [String],
+      trim: false,
     },
-  ],
   inStock: {
     type: Boolean,
     default: true,
@@ -21,6 +19,9 @@ const shirtSchema = new Schema({
   category: {
     type: String,
   },
+  imgurl: {
+    type: String,
+  }
 });
 
 const Shirt = model('Shirt', shirtSchema);
