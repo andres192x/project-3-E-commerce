@@ -4,14 +4,15 @@ const typeDefs = gql`
   type Shirt {
     _id: ID
     itemName: String
-    size: String
+    size: [String]
     inStock: Boolean
     category: String
+    imgurl: String
   }
 
   type Query {
     findAllShirts: [Shirt]!
-    findOneShirt(shirtId: ID): Shirt
+    findOneShirt(shirtId: ID!): Shirt
   }
 `;
 

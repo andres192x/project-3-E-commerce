@@ -3,12 +3,14 @@
         "itemName": "hello-world",
         "size": ["S", "M", "L"],
         "inStock": true,
-        "category": "M"
+        "category": "M",
+        "imgurl": "https://image.spreadshirtmedia.com/image-server/v1/products/T812A2PA4267PT17X48Y38D1035612463W24987H24987/views/1,width=550,height=550,appearanceId=2,backgroundColor=F2F2F2,modelId=115,crop=list/sysadmin-programming-computer-science-gift-mens-premium-t-shirt.jpg"
     },
     {
         "itemName": "react",
         "size": ["S", "M", "L"],
         "inStock": true,
-        "category": "W"
+        "category": "W",
+        "imgurl": "test"
     }
 ]

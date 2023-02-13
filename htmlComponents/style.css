@@ -1,0 +1,29 @@
+video {
+    width: 50%;
+}
+
+.card {
+    width: 80%;
+}
+
+.box {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin: 10px;
+    height: 180px;
+    width: 180px;
+}
+
+.remove-btn {
+    width: fit-content;
+
+}
+
+.summary-card {
+    border: solid black;
+    margin: 20px;
+    padding: 15px;
+}
