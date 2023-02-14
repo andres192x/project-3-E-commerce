@@ -7,16 +7,16 @@ const shirtSchema = new Schema({
     unique: true,
     trim: true,
   },
-  size: 
-    {
-      type: [String],
-      trim: false,
-    },
+  size:
+  {
+    type: [String],
+    trim: false,
+  },
   inStock: {
     type: Boolean,
     default: true,
   },
-  category: {
+  price: {
     type: String,
   },
   imgurl: {
