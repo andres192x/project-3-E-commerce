@@ -9,7 +9,7 @@ import Signup from './components/Signup';
 
 function App() {
   return (
-    <main class="bg-dark vh-100 ">
+    <main class="bg-dark vh-100">
        {/* <Login /> */}
        <Signup />
     </main>
