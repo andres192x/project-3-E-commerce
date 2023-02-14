@@ -6,7 +6,7 @@ const typeDefs = gql`
     itemName: String
     size: [String]
     inStock: Boolean
-    category: String
+    price: String
     imgurl: String
   }
 

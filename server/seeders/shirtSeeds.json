@@ -3,14 +3,42 @@
         "itemName": "hello-world",
         "size": ["S", "M", "L"],
         "inStock": true,
-        "category": "M",
-        "imgurl": "https://image.spreadshirtmedia.com/image-server/v1/products/T812A2PA4267PT17X48Y38D1035612463W24987H24987/views/1,width=550,height=550,appearanceId=2,backgroundColor=F2F2F2,modelId=115,crop=list/sysadmin-programming-computer-science-gift-mens-premium-t-shirt.jpg"
+        "price": "30 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/hello-world-tshirt-black/3.webp"
     },
     {
-        "itemName": "react",
+        "itemName": "sleep not found",
         "size": ["S", "M", "L"],
         "inStock": true,
-        "category": "W",
-        "imgurl": "test"
+        "price": "40 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/sleep-not-found-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "JS do it",
+        "size": ["S", "M", "L"],
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/jsdoit-tshirt-black/4.webp"
+    },
+    {
+        "itemName": "Get me some API now",
+        "size": ["S", "M", "L"],
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/get-me-some-api-now-tshirt-black/4.webp"
+    },
+    {
+        "itemName": "I need a break",
+        "size": ["S", "M", "L"],
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/i-need-a-break-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "It's not a bug it's a feature",
+        "size": ["S", "M", "L"],
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/its-not-a-bug-its-a-feature-tshirt-black/3.webp"
     }
 ]

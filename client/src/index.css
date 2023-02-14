@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+img{
+  height:200px
+}
+img:hover{
+  transform: scale(1.3);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+#displayShirts{
+ 
+  display: inline-flex;
+  justify-content:space-evenly;
+}
+.shirt{
+   margin:20px;
+   text-align: center;
+}
