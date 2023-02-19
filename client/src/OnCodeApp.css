@@ -1,0 +1,80 @@
+/*  HEADER CSS */
+h1 a {
+    text-decoration: none;
+    color: #0071bc;
+    ;
+    font-size: xx-large;
+}
+
+.nav {
+    border-bottom: 2mm ridge white;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #0071bc;
+    ;
+}
+
+.nav-item a:hover {
+    color: yellow;
+    transition: 0.7s;
+    font-size: 18px;
+    box-shadow: 5px 10px 18px blue;
+}
+
+.nav-card {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 10px 10px;
+}
+
+.cart-icon {
+    max-height: 40px;
+}
+
+/* FOOTER CSS */
+.footer-card {
+    background-color: #0071bc;
+    padding: 13px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    color: yellow;
+    transition: 0.7s;
+    font-size: 18px;
+}
+
+.logo {
+    max-height: 100px;
+}
