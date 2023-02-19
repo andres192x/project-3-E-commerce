@@ -1,30 +1,34 @@
 import React from 'react';
-
-
 const ShirtList = ({ shirts, title }) => {
-  // if (!shirts.length) {
-  //   return <h3>No shirts Yet</h3>;
-  // }
-// console.log(shirts)
+  const itemArray = []
+  const addItems = (e) => {
+    const getItems = JSON.parse(localStorage.getItem(('items')))
+    if (getItems != null) {
+      getItems.push(e.target.parentNode.id)
+      localStorage.setItem('items', JSON.stringify(getItems));
+    }
+    else {
+      itemArray.push(e.target.parentNode.id)
+      localStorage.setItem('items', JSON.stringify(itemArray));
+    }
+    console.log(getItems)
+  };
   return (
     <div>
       <h3>{title}</h3>
       <div id='displayShirts'>{shirts &&
         shirts.map((shirt) => (
-          <div key={shirt._id} className="shirt">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {shirt.itemName} <br />
-              <span style={{ fontSize: '1rem' }}>
-                <img src={shirt.imgurl} alt={shirt.itemName}></img>
-                <p>Price: {shirt.price}</p> 
-                              </span>
-            </h4>
-            <button type='submit'>Add to cart 🛒</button>
+          <div key={shirt._id} id={shirt._id} className="shirt">
+            <h4 className="shirt heading">
+              {shirt.itemName} <br /></h4>
+            <span style={{ fontSize: '0.8rem' }}>
+              <img src={shirt.imgurl} alt={shirt.itemName}></img>
+              <p>Price: {shirt.price}</p>
+            </span>
+            <button id='addItems' onClick={addItems} >Add to cart 🛒</button>
           </div>
         ))}</div>
-      
     </div>
   );
 };
-
 export default ShirtList;

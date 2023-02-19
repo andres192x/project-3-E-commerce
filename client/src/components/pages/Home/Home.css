@@ -1,0 +1,14 @@
+.home-header {
+    color: yellow;
+    margin: 50px auto;
+}
+
+.video-card {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.video-tag {
+    width: 80vw;
+}

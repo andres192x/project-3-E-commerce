@@ -1,0 +1,43 @@
+.product-section {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: grey;
+    margin: 40px;
+    height: 250px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.box {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin: 10px;
+    height: 180px;
+    width: 180px;
+}
+
+.remove-btn {
+    width: fit-content;
+}
+
+.trash-icon {
+    max-height: 30px;
+}
+
+.item-body {
+    padding: 10px;
+}
