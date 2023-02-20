@@ -2,10 +2,10 @@ import React from 'react';
 // Import the `useQuery()` hook from Apollo Client
 import { useQuery } from '@apollo/client';
 
-import ShirtList from '../components/Shirts';
+import ShirtList from '.';
 
 // Import the query we are going to execute from its file
-import { QUERY_SHIRTS } from '../utils/queries';
+import { QUERY_SHIRTS } from '../../utils/queries';
 
 const DisplayShirts = () => {
     // Execute the query on component load
