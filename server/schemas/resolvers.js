@@ -20,8 +20,27 @@ const resolvers = {
   },
 
   Mutation: {
-    addCart: async (parent, { itemName, price, imgurl }) => {
-      return Cart.create({ itemName, price, imgurl })
+    // addCart: async (parent, { itemName, price, imgurl }) => {
+    //   return Cart.create({ itemName, price, imgurl })
+    // },
+    addCart: async (parent, { itemName, price, imgurl }, context) => {
+      if (context.user) {
+        const cart = await Cart.create(
+          {
+          itemName,
+          price,
+          imgurl,
+          userName: context.user.name
+          });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { cart: cart._id } }
+        );
+
+        return cart;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
     addUser: async (parent, { name, email, password }) => {
       const user = await User.create({ name, email, password });
@@ -43,7 +62,6 @@ const resolvers = {
       }
 
       const token = signToken(user);
-      console.log('TOKEN:  ', token)
       return { token, user };
     },
     // addSkill: async (parent, { profileId, skill }) => {

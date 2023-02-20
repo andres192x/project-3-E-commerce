@@ -15,6 +15,7 @@ const typeDefs = gql`
     itemName: String
     price: String
     imgurl: String
+    userName: String
   }
 
   type User {

@@ -12,6 +12,9 @@ const cartSchema = new Schema({
     },
     imgurl: {
         type: String,
+    },
+    userName: {
+        type: String,
     }
 });
 
