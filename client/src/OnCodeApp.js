@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 // contains css for header && footer
 import './OnCodeApp.css';
@@ -12,6 +13,11 @@ import Collection from './components/pages/Collection/Collection';
 import Cart from './components/pages/Cart/Cart';
 import Login from './components/pages/Login/Login'
 import Signup from './components/pages/Login/Signup'
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function OnCodeApp() {
 
@@ -33,7 +39,7 @@ function OnCodeApp() {
         return <Cart />
 
       case 'login':
-        return <Login />
+        return <Login handlePageRender={handlePageRender} />
 
       default:
     }
@@ -42,16 +48,18 @@ function OnCodeApp() {
 
 
   return (
-    <main>
-      {/* NAVBAR */}
-      <Header page={page} handlePageRender={handlePageRender} />
-      {/* MAIN SECTION TO RERENDER */}
-      <section id='page'>
-        {renderPage()}
-      </section>
-      {/* FOOTER */}
-      <Footer />
-    </main>
+    <ApolloProvider client={client}>
+      <main>
+        {/* NAVBAR */}
+        <Header page={page} handlePageRender={handlePageRender} />
+        {/* MAIN SECTION TO RERENDER */}
+        <section id='page'>
+          {renderPage()}
+        </section>
+        {/* FOOTER */}
+        <Footer />
+      </main>
+    </ApolloProvider>
   );
 }
 export default OnCodeApp;
