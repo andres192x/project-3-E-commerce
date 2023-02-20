@@ -1,4 +1,8 @@
 const { Shirt } = require('../models');
+const { Cart } = require('../models');
+const { User } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -9,18 +13,60 @@ const resolvers = {
     findOneShirt: async (parent, { shirtId }) => {
       return Shirt.findOne({ _id: shirtId });
     },
+
+    findAllCart: async () => {
+      return Cart.find();
+    }
   },
 
+  Mutation: {
+    addCart: async (parent, { itemName, price, imgurl }) => {
+      return Cart.create({ itemName, price, imgurl })
+    },
+    addUser: async (parent, { name, email, password }) => {
+      const user = await User.create({ name, email, password });
+      const token = signToken(user);
 
-  // Mutation: {
-  //   addShirt: async (parent, { itemName, category}) => {
-  //     return Shirt.create({ itemName, category });
-  //   },
+      return { token, user };
+    },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
-  //   removeShirt: async (parent, { id }) => {
-  //     return Shirt.findOneAndDelete({ _id: id });
-  //   },
-  // },
+      if (!user) {
+        throw new AuthenticationError('No profile with this email found!');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password!');
+      }
+
+      const token = signToken(user);
+      console.log('TOKEN:  ', token)
+      return { token, user };
+    },
+    // addSkill: async (parent, { profileId, skill }) => {
+    //   return Profile.findOneAndUpdate(
+    //     { _id: profileId },
+    //     {
+    //       $addToSet: { skills: skill },
+    //     },
+    //     {
+    //       new: true,
+    //       runValidators: true,
+    //     }
+    //   );
+    // },
+
+
+    //   addShirt: async (parent, { itemName, category}) => {
+    //     return Shirt.create({ itemName, category });
+    //   },
+
+    //   removeShirt: async (parent, { id }) => {
+    //     return Shirt.findOneAndDelete({ _id: id });
+    //   },
+  }
 };
-
 module.exports = resolvers;

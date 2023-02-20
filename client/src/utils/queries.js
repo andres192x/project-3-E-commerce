@@ -10,3 +10,23 @@ query FindAllShirts {
       imgurl
     }}
 `;
+
+export const QUERY_ONESHIRT=gql`
+query FindOneShirt($shirtId: ID!) {
+  findOneShirt(shirtId: $shirtId) {
+    imgurl
+    itemName
+    price
+  }
+}
+`;
+
+export const QUERY_CART = gql`
+query Query {
+  findAllCart {
+    imgurl
+    itemName
+    price
+  }
+}
+`;
