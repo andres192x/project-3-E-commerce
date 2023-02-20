@@ -6,6 +6,7 @@ mutation AddCart($itemName: String, $price: String, $imgurl: String) {
       imgurl
       itemName
       price
+      userName
     }
   }
 `;

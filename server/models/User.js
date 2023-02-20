@@ -19,12 +19,12 @@ const UserSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  // userCart: [
-  //   {
-  //     type: String,
-  //     trim: true,
-  //   },
-  // ],
+  userCart: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Cart',
+    },
+  ]
 });
 
 // set up pre-save middleware to create password

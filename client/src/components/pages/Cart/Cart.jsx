@@ -1,6 +1,9 @@
 import './Cart.css';
 import trashIcon from '../../../Assets/trashIcon.png';
 import Subtotal from '../../Subtotal/Subtotal';
+import Login from '../Login/Login';
+
+import Auth from '../../../utils/auth';
 
 export default function Cart() {
 
@@ -11,9 +14,12 @@ export default function Cart() {
     const yes = 'yes'
     const size = 'Medium'
     const price = '$40'
+    const login = Auth.loggedIn();
 
     return (
         <section className='product-section'>
+        {login ? 
+        <div>
             <div className="card">
                 <div className='img-container'>
                     {/* put img here */}
@@ -28,6 +34,10 @@ export default function Cart() {
                 </div>
             </div>
             <Subtotal />
-        </section>
+            </div> :
+            <Login />
+        }
+        </section> 
+
     )
 }

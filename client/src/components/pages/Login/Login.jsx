@@ -1,15 +1,17 @@
 import React from 'react';
 import './Login.css';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+// import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { useMutation } from '@apollo/client';
 import { NEW_LOGIN } from '../../../utils/mutations';
 
-import { onError } from '@apollo/client/link/error';
+// import { onError } from '@apollo/client/link/error';
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
+// const client = new ApolloClient({
+//   uri: '/graphql',
+//   cache: new InMemoryCache(),
+// });
+
+import Auth from '../../../utils/auth';
 
 
 function Login({handlePageRender}) {
@@ -19,18 +21,20 @@ function Login({handlePageRender}) {
     e.preventDefault();
     const userEmail = e.target.previousSibling.previousSibling.previousSibling.childNodes[1].value;
     const userPassword = e.target.previousSibling.previousSibling.childNodes[1].value;
-    // const userName = e.target.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1].value;
     try {
       const loginAction = await login({
         variables: {
-          // name: userName,
           email: userEmail,
           password: userPassword
         }
       });
       if(loginAction) {
-        // console.log('logged in: ', loginAction);
-        handlePageRender('cart');
+        console.log('logged in: ', loginAction);
+        let token = loginAction.data.login.token;
+        // console.log('token: ', token);
+        Auth.login(token);
+
+        // handlePageRender('cart');
       }
 
     } catch (err) {

@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
+import Auth from './utils/auth';
+
 // contains css for header && footer
 import './OnCodeApp.css';
 // import components
@@ -36,7 +38,7 @@ function OnCodeApp() {
         return <Collection />
 
       case 'cart':
-        return <Cart />
+          return <Cart handlePageRender={handlePageRender} />
 
       case 'login':
         return <Login handlePageRender={handlePageRender} />
@@ -53,7 +55,7 @@ function OnCodeApp() {
         {/* NAVBAR */}
         <Header page={page} handlePageRender={handlePageRender} />
         {/* MAIN SECTION TO RERENDER */}
-        <section id='page'>
+        <section id='page'>          
           {renderPage()}
         </section>
         {/* FOOTER */}
