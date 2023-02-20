@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    border: 1px solid white;
+}
+
+.form>div {
+    margin: 20px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item input {
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,31 +1,73 @@
 import React from 'react';
-// import "bootstrap/dist/css/bootstrap.min.css";
+import './Login.css';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { useMutation } from '@apollo/client';
+import { NEW_LOGIN } from '../../../utils/mutations';
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
+
 
 function Login() {
+  // const [login] = useMutation(NEW_LOGIN)
+
+  // const loginUser = async (e) => {
+  //   e.preventDefault();
+  //   const userEmail = e.target.previousSibling.previousSibling.previousSibling.childNodes[1].value;
+  //   const userPassword = e.target.previousSibling.previousSibling.childNodes[1].value;
+  //   const userName = e.target.previousSibling.previousSibling.previousSibling.previousSibling.childNodes[1].value;
+  //   try {
+  //     const loginAction = await login({
+  //       variables: {
+  //         name: userName,
+  //         email: userEmail,
+  //         password: userPassword
+  //       }
+  //     });
+
+  //     console.log('logged in')
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
   return (
-    <form class="row col-3 mx-auto align-items-center border mt-6 bg-light border-white-50 border-2 rounded  p-3">
-    <div class="mb-3 text-start mt-2">
-      <label for="exampleInputEmail1" class="form-label ">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-      <div id="emailHelp" class="form-text text-1 fs-7 ">We'll never share your email with anyone else.</div>
-      
-    </div>
-    
-    <div class="mb-3 mt-3 text-start">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1"/>
-    </div>
+    // <ApolloProvider client={client}>
+      <div className='container'>
+        <form className='form'>
+          <h2>Login</h2>
 
-    <div class="mb-3 form-check ">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-      <label class="form-check-label" for="exampleCheck1">Remember me</label>
-    </div>
-    <button type="submit" class="btn btn-dark w-100 ">Sign in</button>
+          <div className='form-item'>
+            <label for="exampleInputUsername1" >Username</label>
+            <input type="username" id="username" />
+          </div>
 
-    <div>
-      <p class="text-center mt-3">Don't have an account? <a href="/signup">Sign up</a></p>
-    </div>
-  </form>
+          <div className='form-item'>
+            <label for="exampleInputEmail1" >Email address</label>
+            <input type="email" id="email" aria-describedby="emailHelp" />
+            <div id="emailHelp">We'll never share your email with anyone else.</div>
+
+          </div>
+
+          <div className='form-item'>
+            <label for="exampleInputPassword1" >Password</label>
+            <input type="password" id="password" />
+          </div>
+
+          <div>
+            <input type="checkbox" id="exampleCheck1" />
+            <label for="exampleCheck1">Remember me</label>
+          </div>
+          <button  >Sign in</button>
+
+          <div className='form-item'>
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+    // {/* </ApolloProvider> */}
   );
 }
 

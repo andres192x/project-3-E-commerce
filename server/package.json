@@ -17,7 +17,9 @@
     "bootstrap": "^5.2.3",
     "express": "^4.17.2",
     "graphql": "^16.3.0",
-    "mongoose": "^6.2.0"
+    "mongoose": "^6.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "bcrypt": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
