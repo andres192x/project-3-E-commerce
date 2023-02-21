@@ -24,7 +24,7 @@ export default function Cart() {
                     <p> In Stock:  {yes}</p>
                     <p>{size}</p>
                     <p>{price}</p>
-                    <div><a id="remove-item"><img onClick={() => { console.log('delete item clicked') }}  className='trash-icon' src={trashIcon} /></a></div>
+                    {/* <div><img onClick={() => { console.log('delete item clicked') }}  className='trash-icon' src={trashIcon} /></div> */}
                 </div>
             </div>
             <Subtotal />

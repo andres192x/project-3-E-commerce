@@ -5,7 +5,7 @@ import { useRef } from 'react';
 export default function Home() {
     const videoRef= useRef();
     const setPlayBack = () => {
-        videoRef.current.playbackRate = 1;
+        videoRef.current.playbackrate = 1;
     };
 
     return (
@@ -17,7 +17,7 @@ export default function Home() {
 
             <div className='video-card'>
                 <video ref={videoRef}
-        onCanPlay={() => setPlayBack()} className='video-tag' playbackRate='' autoPlay loop muted>
+        onCanPlay={() => setPlayBack()} className='video-tag' playbackrate='' autoPlay loop muted>
                     <source src={onCodeVid} type='video/mp4' />
                 </video>
             </div>
