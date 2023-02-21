@@ -35,16 +35,17 @@ To run a version of the application on your localhost do the following:
 3. Once all dependencies are installed type `npm run develop` which will concurrently run the server and client 
 
 ## 🤹 Usage
+
 ## Usage
 To invoke the app navigate to the corresponding directory and run:
-```
+
 npm run start
 
 ## ✔️ Tests
 
 N/A
 
-## ⚠️ License
+## License
 
 On code is  is free and open-source software licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
