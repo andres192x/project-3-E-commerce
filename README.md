@@ -1,7 +1,7 @@
 # On Coder-E-commerce
 
 <p align="center">
- "  width="50%" height="50%">
+
 </p>
 
 ## :clipboard: Table of Contents
