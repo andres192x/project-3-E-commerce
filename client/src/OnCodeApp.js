@@ -43,6 +43,9 @@ function OnCodeApp() {
       case 'login':
         return <Login handlePageRender={handlePageRender} />
 
+        case 'sign-up':
+          return <Signup handlePageRender={handlePageRender} />
+
       default:
     }
 

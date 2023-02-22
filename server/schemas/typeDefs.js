@@ -20,7 +20,7 @@ const typeDefs = gql`
 
   type User {
     _id: ID
-    username: String
+    name: String
     email: String
     password: String
     userCart: [String]
@@ -34,13 +34,14 @@ const typeDefs = gql`
   type Query {
     findAllShirts: [Shirt]!
     findOneShirt(shirtId: ID!): Shirt
-    findAllCart:[Cart]
+    findUserCart(userName: String!): [Cart]
   }
 
   type Mutation {
-    addCart(itemName:String,price:String,imgurl:String):Cart
-    addUser(name:String!,email:String!,password:String!): Auth
+    addCart(itemName:String,price:String,imgurl:String,userName:String): Cart
+    addUser(name: String!, email: String! , password: String!): Auth
     login(email:String!, password:String!): Auth
+    removeCart(_id: ID!): Cart
   }
 
 `;
