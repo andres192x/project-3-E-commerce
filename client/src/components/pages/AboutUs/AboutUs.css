@@ -5,8 +5,12 @@ section {
     margin: 0;
 }
 
+.header {
+    padding: 10px;
+}
+
 .about>p{
-    
+    padding: 10px;
     inline-size: 800px;
     overflow-wrap: break-word;
     font-size: 20px;
@@ -14,7 +18,8 @@ section {
 
 .side-bar {
     display: flex;
-    gap: px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .side-bar > h2 {

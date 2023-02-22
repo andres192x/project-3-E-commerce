@@ -15,6 +15,7 @@ const cartSchema = new Schema({
     },
     userName: {
         type: String,
+        required: true
     }
 });
 
