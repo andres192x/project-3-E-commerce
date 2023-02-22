@@ -32,6 +32,8 @@ function Login({handlePageRender}) {
         console.log('logged in: ', loginAction);
         let token = loginAction.data.login.token;
         // console.log('token: ', token);
+        
+        // sets token to local storage
         Auth.login(token);
 
         // handlePageRender('cart');
@@ -42,22 +44,21 @@ function Login({handlePageRender}) {
     }
   }
 
+  const renderSignUp = (e) => {
+    e.preventDefault();
+    handlePageRender('sign-up')
+  }
+
   return (
     // <ApolloProvider client={client}>
       <div className='container'>
         <form className='form'>
           <h2>Login</h2>
 
-          {/* <div className='form-item'>
-            <label for="exampleInputUsername1" >Username</label>
-            <input type="username" id="username" />
-          </div> */}
-
           <div className='form-item'>
             <label for="exampleInputEmail1" >Email address</label>
             <input type="email" id="email" aria-describedby="emailHelp" />
             <div id="emailHelp">We'll never share your email with anyone else.</div>
-
           </div>
 
           <div className='form-item'>
@@ -69,10 +70,11 @@ function Login({handlePageRender}) {
             <input type="checkbox" id="exampleCheck1" />
             <label for="exampleCheck1">Remember me</label>
           </div>
-          <button onClick={loginUser} >Sign in</button>
+          <button className='btn' onClick={loginUser} >Login</button>
 
           <div className='form-item'>
-            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+            <p>Don't have an account?</p>
+            <button className='btn' onClick={renderSignUp}>Sign Up</button>
           </div>
         </form>
       </div>

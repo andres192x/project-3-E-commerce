@@ -3,6 +3,7 @@ import React from 'react';
 import { useMutation } from '@apollo/client';
 import { QUERY_ONESHIRT } from '../../utils/queries';
 import { ADD_CART } from '../../utils/mutations';
+import Auth from '../../utils/auth'
 const ShirtList = ({ shirts, title }) => {
   // const HandleCart = () => {
   const [addToCart] = useMutation(ADD_CART)
@@ -11,12 +12,15 @@ const ShirtList = ({ shirts, title }) => {
     const name = e.target.parentNode.dataset.name
     const cost = e.target.parentNode.dataset.price
     const img = e.target.parentNode.dataset.img
+    const username=Auth.getProfile().data.name
+    console.log('USERNAME: ', username)
     try {
       const addingToCart = await addToCart({
         variables: {
           itemName: name,
           price: cost,
-          imgurl: img
+          imgurl: img,
+          userName: username
         }
       })
       console.log(addingToCart)
@@ -24,6 +28,7 @@ const ShirtList = ({ shirts, title }) => {
     catch (err) {
       console.log(err)
     }
+    console.log(Auth.getProfile().data._id)
   }
   // }
   // const itemArray = []
