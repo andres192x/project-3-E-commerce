@@ -19,17 +19,37 @@ import { DELETE_ITEM } from '../../../utils/mutations';
 export default function Cart() {
     let user = Auth.getProfile().data.name;
     console.log('USER: ', user)
-
+    
     const { data } = useQuery(QUERY_CART, {
         variables: {
             userName: user
         }
     });
     
-    console.log('DATA: ', data)
+    const cartItems = data?.findUserCart || [];
+    console.log('CARTITEMS: ', cartItems)
     // const [cartData, setCartData] = useState(data);
-    
-    useEffect(() => { }, [data])
+
+    // useEffect(() => { })
+
+    const showUserCartData = (cartItems) => {
+        console.log(cartItems)
+        return cartItems.map((item, index) => {
+            return (
+                <div className="card" id={index}>
+                    <div className='img-container'>
+                        <img src={item.imgurl} alt={item.itemName} />
+                    </div>
+                    <div className='item-body'>
+                        <p>{item.itemName}</p>
+                        <p>{item.price}</p>
+                        <div><a><img id={item._id} onClick={deleteItem} className='trash-icon' src={trashIcon} /></a></div>
+                    </div>
+                </div>
+            )
+        })
+    }
+
 
     const [deleteCartItem] = useMutation(DELETE_ITEM)
 
@@ -43,14 +63,15 @@ export default function Cart() {
             })
             console.log('DELETED CART ITEM: ', deleteCart)
 
+
+
+
           }
           catch (err) {
             console.log(err)
           }
     }
 
-    const cartItems = data?.findUserCart || [];
-    console.log('CARTITEMS: ', cartItems)
 
     const login = Auth.loggedIn();
 
@@ -58,21 +79,8 @@ export default function Cart() {
         <section className='product-section'>
             {login ?
                 <div>
-                    {cartItems.map((item, index) => {
-                        return (
-                            <div className="card" id={index}>
-                                <div className='img-container'>
-                                    <img src={item.imgurl} alt={item.itemName} />
-                                </div>
-                                <div className='item-body'>
-                                    <p>{item.itemName}</p>
-                                    <p>{item.price}</p>
-                                    <div><a><img id={item._id} onClick={deleteItem} className='trash-icon' src={trashIcon} /></a></div>
-                                </div>
-                            </div>
-                        )
-                    }
-                    )}
+                    {showUserCartData(cartItems)}
+                    
                     <Subtotal />
                 </div> :
                 <Login />
