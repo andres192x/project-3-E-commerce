@@ -19,6 +19,9 @@ const resolvers = {
       return Cart.where({ userName: args.userName }).find()
 
       // return Cart.find().sort({ userName: 1 });
+    },
+    findShirt: async (parents, args) => {
+      return await Shirt.where({ category: args.category }).find()
     }
   },
 
@@ -26,13 +29,14 @@ const resolvers = {
     // addCart: async (parent, { itemName, price, imgurl }) => {
     //   return Cart.create({ itemName, price, imgurl })
     // },
-    addCart: async (parent, { itemName, price, imgurl, userName, userID }) => {
+    addCart: async (parent, { itemName, price, imgurl, userName, userID, qty }) => {
       // console.log('Context: ', React.context)
       const cart = await Cart.create({
         itemName,
         price,
         imgurl,
-        userName
+        userName,
+        qty
       });
 
       const updateUser = await User.findOneAndUpdate(

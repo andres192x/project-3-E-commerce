@@ -1,9 +1,11 @@
 import { gql } from '@apollo/client';
 
 export const ADD_CART = gql`
-mutation Mutation($itemName: String, $price: String, $imgurl: String, $userName: String, $userID: String) {
-  addCart(itemName: $itemName, price: $price, imgurl: $imgurl, userName: $userName, userID: $userID) {
+mutation AddCart($itemName: String, $price: String, $imgurl: String, $userName: String, $qty: Int, $userID: String) {
+  addCart(itemName: $itemName, price: $price, imgurl: $imgurl, userName: $userName, qty: $qty, userID: $userID) {
+    imgurl
     itemName
+    price
     userName
   }
 }

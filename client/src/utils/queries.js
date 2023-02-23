@@ -32,3 +32,15 @@ query Query($userName: String!) {
   }
 }
 `;
+
+export const QUERY_SHIRTCATEGORY=gql`
+query Query($category: String) {
+  findShirt(category: $category) {
+    category
+    imgurl
+    inStock
+    itemName
+    price
+  }
+}
+`
