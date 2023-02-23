@@ -17,9 +17,9 @@ export default function Collection() {
         // <ApolloProvider client={client}>
             <div className="flex-column justify-flex-start min-100-vh">
                 <DisplayShirts />
-                <div>
+                {/* <div>
                     <Shirts />
-                </div>
+                </div> */}
             </div>
         // </ApolloProvider>
     )
