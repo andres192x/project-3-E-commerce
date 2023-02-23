@@ -1,6 +1,20 @@
 import './Subtotal.css';
 
 export default function Cart() {
+
+    // const subtotal = () => {
+        // let total = 0;
+        // const prices = document.querySelectorAll('.item-price')
+
+        // prices.forEach((price) => {
+        //     console.log(price.dataset.price)
+        //     return total += parseInt(price.dataset.price);
+        // })
+
+        // console.log('TOTAL: ', total)
+    // }
+    // subtotal()
+
     return (
         <section class="summary-card" id="summary">
             <h3>Summary</h3>

@@ -12,3 +12,16 @@
 .video-tag {
     width: 80vw;
 }
+
+.slogan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.author {
+    color: yellow;
+    font-size: larger;
+    font-style: italic;
+}

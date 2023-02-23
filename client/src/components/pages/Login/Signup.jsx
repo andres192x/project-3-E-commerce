@@ -2,14 +2,17 @@ import React from 'react';
 import './Signup.css'
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../../../utils/mutations';
+import { ADD_USER, NEW_LOGIN } from '../../../utils/mutations';
 import { useRef } from 'react';
+import Auth from '../../../utils/auth'
 
 function Login({ handlePageRender }) {
   const [addUser] = useMutation(ADD_USER)
   const refUsername = useRef()
   const refEmail = useRef()
   const refPassword = useRef()
+
+  const [login] = useMutation(NEW_LOGIN)
 
   const addNewUser = async (e) => {
     e.preventDefault();
@@ -33,6 +36,25 @@ function Login({ handlePageRender }) {
       if(addUserAction) {
         console.log('User added to db: ', addUserAction);
         handlePageRender('home');
+        // if user added to db, login
+
+        const loginAction = await login({
+          variables: {
+            email: email,
+            password: password
+          }
+        });
+        if(loginAction) {
+          console.log('logged in: ', loginAction);
+          let token = loginAction.data.login.token;
+          // console.log('token: ', token);
+          // sets token to local storage
+          Auth.login(token);
+  
+        }
+
+
+
       }
 
     } catch (err) {

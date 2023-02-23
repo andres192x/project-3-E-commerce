@@ -18,14 +18,14 @@ console.log(shirts)
     return (
         <main>
             <div className="flex-row justify-center">
-                <div className="col-12 col-md-8 mb-3">
+                <div>
+                <h3 className='product-header'>Products</h3>
                     {/* If the data is still loading, render a loading message */}
                     {loading ? (
                         <div>Loading...</div>
                     ) : (
                         <ShirtList
                             shirts={shirts}
-                            title="All shirts"
                         />
                     )}
                 </div>

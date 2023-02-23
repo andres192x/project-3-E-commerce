@@ -31,19 +31,76 @@ img:hover{
 .shirt{
    margin:20px;
    text-align: center;
+   font-size: larger;
 }
 button{
   text-align: center;
-  height:30px;
+  height:fit-content;
   border-radius: 15px;
   color: white;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
   border:solid 1px;
   background-color: black;
+  padding: 10px;
+  cursor: pointer;
 }
 button:active{
   border:3px;
   font-size: larger;
   transition:0.5s;
   transition-timing-function: ease-in-out;
+}
+
+.shirt-container {
+  display: flex;
+  flex-wrap: wrap;
+  scale: 1.1;
+  justify-content: space-around;
+  max-width: 80%;
+  margin-right: auto;
+}
+
+.collection-container {
+  display:inline-flex;
+  /* flex-direction: row; */
+  margin-top: 4%;
+
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  /* max-width: 20%; */
+  margin: 100px 50px;
+  margin-right: auto;
+}
+
+.btn-item {
+  margin: 20px;
+  padding: 10px;
+  height: fit-content;
+}
+
+.btn-item:hover {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+}
+
+.quantity-container {
+  margin: 20px;
+  font-size: larger;
+}
+
+select {
+  font-size: large;
+  border-radius: 3px;
+}
+
+.product-header {
+    text-align: center;
+    font-size: 45px;
 }

@@ -11,8 +11,9 @@ export default function Home() {
     return (
         <div>
             {/* slogan? */}
-            <div>
-                <h1 className='home-header'>hello coders</h1>
+            <div className='slogan-container'>
+                <h1 className='home-header'>"Debugging is like being a detective in a crime movie where you are also the murderer."</h1>
+                <p className='author'> - Filipe Fortes</p>
             </div>
 
             <div className='video-card'>
