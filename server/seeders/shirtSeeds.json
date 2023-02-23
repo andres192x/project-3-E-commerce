@@ -1,42 +1,84 @@
 [
     {
         "itemName": "hello-world",
-        "size": ["S", "M", "L"],
+        "category": "shirt",
         "inStock": true,
         "price": "30 CAD",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/hello-world-tshirt-black/3.webp"
     },
     {
         "itemName": "sleep not found",
-        "size": ["S", "M", "L"],
+        "category": "shirt",
         "inStock": true,
         "price": "40 CAD",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/sleep-not-found-tshirt-black/3.webp"
     },
     {
         "itemName": "JS do it",
-        "size": ["S", "M", "L"],
+        "category": "shirt",
         "inStock": true,
         "price": "50 CAD",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/jsdoit-tshirt-black/4.webp"
     },
     {
         "itemName": "Get me some API now",
-        "size": ["S", "M", "L"],
+        "category": "hoodie",
         "inStock": true,
         "price": "50 CAD",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/get-me-some-api-now-tshirt-black/4.webp"
     },
     {
         "itemName": "I need a break",
-        "size": ["S", "M", "L"],
+        "category": "hoodie",
         "inStock": true,
         "price": "50 CAD",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/i-need-a-break-tshirt-black/3.webp"
     },
     {
         "itemName": "It's not a bug it's a feature",
-        "size": ["S", "M", "L"],
+        "category": "hoodie",
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/its-not-a-bug-its-a-feature-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "hello-world",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "30 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/hello-world-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "sleep not found",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "40 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/sleep-not-found-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "JS do it",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/jsdoit-tshirt-black/4.webp"
+    },
+    {
+        "itemName": "Get me some API now",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/get-me-some-api-now-tshirt-black/4.webp"
+    },
+    {
+        "itemName": "I need a break",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50 CAD",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/i-need-a-break-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "It's not a bug it's a feature",
+        "category": "shirtHoodie",
         "inStock": true,
         "price": "50 CAD",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/its-not-a-bug-its-a-feature-tshirt-black/3.webp"

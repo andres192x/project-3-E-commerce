@@ -33,18 +33,12 @@ export default function Cart() {
     const [cartData, setCartData] = useState(cartItems);
 
     useEffect(() => { 
-        // const { data } = useQuery(QUERY_CART, {
-        //     variables: {
-        //         userName: user
-        //     }
-        // });
 
         const cartData = data?.findUserCart || [];
         setCartData(cartData);
-        // showUserCartData(cartItems)
-
     })
 
+    // renders user's cart based on query data
     const showUserCartData = (cartItems) => {
         console.log(cartItems)
         return cartItems.map((item, index) => {

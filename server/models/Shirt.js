@@ -21,6 +21,10 @@ const shirtSchema = new Schema({
   },
   imgurl: {
     type: String,
+  },
+  category: {
+    type: String,
+    trim: false,
   }
 });
 
