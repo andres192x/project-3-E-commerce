@@ -41,6 +41,7 @@ function Login({handlePageRender}) {
 
     } catch (err) {
       console.log(err)
+      alert('Account not found.')
     }
   }
 

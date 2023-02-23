@@ -31,9 +31,9 @@ const ShirtList = ({ shirts, title }) => {
   })
 
   useEffect(() => {
-      const filteredShirts = data?.findShirt || []
-      setShirts(filteredShirts)
-      console.log(filteredShirts)
+    const filteredShirts = data?.findShirt || []
+    setShirts(filteredShirts)
+    console.log(filteredShirts)
   })
 
   const cartFunction = async (e) => {
@@ -43,7 +43,7 @@ const ShirtList = ({ shirts, title }) => {
     const img = e.target.parentNode.dataset.img
     const username = Auth.getProfile().data.name
     const userID = Auth.getProfile().data._id
-    console.log('USERID: '. userID)
+    console.log('USERID: '.userID)
     const qnty = parseInt(e.target.previousSibling.children[1].value)
     console.log(typeof qnty)
     try {
@@ -65,27 +65,28 @@ const ShirtList = ({ shirts, title }) => {
     console.log(Auth.getProfile().data._id)
   }
   return (
-    <div>
-      <h3>{title}</h3>
-      <button id='gettingShirt' onClick={setShirt}>Shirts</button>
-      <button id='gettingHoodie' onClick={setHoodie}>Hoodies</button>
-      <button id='getAll' onClick={clearFilter}>Show All</button>
-      <div id='displayShirts'>{allShirts &&
+    <div className='collection-container'>
+      <div className='filter-container'>
+        <button className='btn-item' id='gettingShirt' onClick={setShirt}>Shirts</button>
+        <button className='btn-item' id='gettingHoodie' onClick={setHoodie}>Hoodies</button>
+        <button className='btn-item' id='getAll' onClick={clearFilter}>Show All</button>
+      </div>
+      <div className='shirt-container' id='displayShirts'>{allShirts &&
         allShirts.map((shirt) => (
           <div key={shirt._id} id={shirt._id} data-name={shirt.itemName} data-price={shirt.price} data-img={shirt.imgurl} className="shirt">
-            <h4 className="shirt heading">
+            <h4 className="shirt">
               {shirt.itemName} <br /></h4>
             <span style={{ fontSize: '0.8rem' }}>
-              <img src={shirt.imgurl} alt={shirt.itemName}></img>
+              <img className='product-img' src={shirt.imgurl} alt={shirt.itemName}></img>
               <p>Price: {shirt.price}</p>
             </span>
-            <section key={shirt.id}><label>Qty: </label>
+            <section className='quantity-container' key={shirt.id}><label>Qty: </label>
               <select key={shirt.id}>
                 <option value={1}>1</option>
                 <option value={2}>2</option>
                 <option value={3}>3</option>
                 <option value={4}>4</option></select></section>
-            <button id={shirt._id} onClick={cartFunction} >Add to cart :shopping_trolley:</button>
+            <button id={shirt._id} onClick={cartFunction} >Add to cart 🛒</button>
           </div>
         ))}</div>
     </div>

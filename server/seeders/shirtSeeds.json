@@ -3,84 +3,168 @@
         "itemName": "hello-world",
         "category": "shirt",
         "inStock": true,
-        "price": "30 CAD",
+        "price": "30",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/hello-world-tshirt-black/3.webp"
     },
     {
         "itemName": "sleep not found",
         "category": "shirt",
         "inStock": true,
-        "price": "40 CAD",
+        "price": "40",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/sleep-not-found-tshirt-black/3.webp"
     },
     {
         "itemName": "JS do it",
         "category": "shirt",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/jsdoit-tshirt-black/4.webp"
     },
     {
         "itemName": "Get me some API now",
-        "category": "hoodie",
+        "category": "shirt",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/get-me-some-api-now-tshirt-black/4.webp"
     },
     {
         "itemName": "I need a break",
-        "category": "hoodie",
+        "category": "shirt",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/i-need-a-break-tshirt-black/3.webp"
     },
     {
         "itemName": "It's not a bug it's a feature",
-        "category": "hoodie",
+        "category": "shirt",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/its-not-a-bug-its-a-feature-tshirt-black/3.webp"
     },
     {
         "itemName": "hello-world",
         "category": "shirtHoodie",
         "inStock": true,
-        "price": "30 CAD",
+        "price": "30",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/hello-world-tshirt-black/3.webp"
     },
     {
         "itemName": "sleep not found",
         "category": "shirtHoodie",
         "inStock": true,
-        "price": "40 CAD",
+        "price": "40",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/sleep-not-found-tshirt-black/3.webp"
     },
     {
         "itemName": "JS do it",
         "category": "shirtHoodie",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/jsdoit-tshirt-black/4.webp"
     },
     {
         "itemName": "Get me some API now",
         "category": "shirtHoodie",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/get-me-some-api-now-tshirt-black/4.webp"
     },
     {
         "itemName": "I need a break",
         "category": "shirtHoodie",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/i-need-a-break-tshirt-black/3.webp"
     },
     {
         "itemName": "It's not a bug it's a feature",
         "category": "shirtHoodie",
         "inStock": true,
-        "price": "50 CAD",
+        "price": "50",
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/its-not-a-bug-its-a-feature-tshirt-black/3.webp"
+    },
+    {
+        "itemName": "Python No Problem",
+        "category": "hoodie",
+        "inStock": true,
+        "price": "30",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/python-no-problem-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Nextjs",
+        "category": "hoodie",
+        "inStock": true,
+        "price": "40",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/nextjs-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Declare variable not war",
+        "category": "hoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/declare-variables-not-war-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Get me some API now",
+        "category": "hoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/get-me-some-api-now-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Img src",
+        "category": "hoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/img-src-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "You are special",
+        "category": "hoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/you-are-special-hoodie-black/3.webp"
+    },
+    {
+        "itemName": "Python No Problem",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "30",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/python-no-problem-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Nextjs",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "40",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/nextjs-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Declare variable not war",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/declare-variables-not-war-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Get me some API now",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/get-me-some-api-now-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "Img src",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/img-src-hoodie-black/4.webp"
+    },
+    {
+        "itemName": "You are special",
+        "category": "shirtHoodie",
+        "inStock": true,
+        "price": "50",
+        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/hoodies/you-are-special-hoodie-black/3.webp"
     }
 ]

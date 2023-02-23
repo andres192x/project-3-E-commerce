@@ -41,6 +41,8 @@ export default function Cart() {
     // renders user's cart based on query data
     const showUserCartData = (cartItems) => {
         console.log(cartItems)
+        // subtotal();
+
         return cartItems.map((item, index) => {
             return (
                 <div className="card" id={index}>
@@ -49,7 +51,7 @@ export default function Cart() {
                     </div>
                     <div className='item-body'>
                         <p>{item.itemName}</p>
-                        <p>{item.price}</p>
+                        <p className='item-price' data-price={item.price}>{item.price}</p>
                         <div><a><img id={item._id} onClick={deleteItem} className='trash-icon' src={trashIcon} /></a></div>
                     </div>
                 </div>
@@ -76,6 +78,17 @@ export default function Cart() {
             console.log(err)
           }
     }
+    // let total = 0;
+
+    // const subtotal = () => {
+    //     const prices = document.querySelectorAll('.item-price')
+    //     prices.forEach((price) => {
+    //         console.log(price.dataset.price)
+    //         return total += parseInt(price.dataset.price);
+    //     })
+
+    //     console.log('TOTAL: ', total)
+    // }
 
 
     const login = Auth.loggedIn();
