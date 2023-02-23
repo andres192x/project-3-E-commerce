@@ -17,9 +17,11 @@ import { useMutation } from '@apollo/client';
 import { DELETE_ITEM } from '../../../utils/mutations';
 
 export default function Cart() {
+    // get user name from token
     let user = Auth.getProfile().data.name;
     console.log('USER: ', user)
     
+    // query cart item by user's name from logged in token 
     const { data } = useQuery(QUERY_CART, {
         variables: {
             userName: user
@@ -27,10 +29,21 @@ export default function Cart() {
     });
     
     const cartItems = data?.findUserCart || [];
-    console.log('CARTITEMS: ', cartItems)
-    // const [cartData, setCartData] = useState(data);
+    // console.log('CARTITEMS: ', cartItems)
+    const [cartData, setCartData] = useState(cartItems);
 
-    // useEffect(() => { })
+    useEffect(() => { 
+        // const { data } = useQuery(QUERY_CART, {
+        //     variables: {
+        //         userName: user
+        //     }
+        // });
+
+        const cartData = data?.findUserCart || [];
+        setCartData(cartData);
+        // showUserCartData(cartItems)
+
+    })
 
     const showUserCartData = (cartItems) => {
         console.log(cartItems)
@@ -62,9 +75,7 @@ export default function Cart() {
               variables: { _id: shirtID }
             })
             console.log('DELETED CART ITEM: ', deleteCart)
-
-
-
+            setCartData(deleteCart);
 
           }
           catch (err) {
@@ -79,7 +90,7 @@ export default function Cart() {
         <section className='product-section'>
             {login ?
                 <div>
-                    {showUserCartData(cartItems)}
+                    {showUserCartData(cartData)}
                     
                     <Subtotal />
                 </div> :

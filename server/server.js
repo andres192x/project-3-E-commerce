@@ -14,6 +14,8 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+// "heroku-prebuild": "npm install --dev; export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev"
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

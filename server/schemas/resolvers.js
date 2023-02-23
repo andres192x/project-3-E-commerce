@@ -26,20 +26,22 @@ const resolvers = {
     // addCart: async (parent, { itemName, price, imgurl }) => {
     //   return Cart.create({ itemName, price, imgurl })
     // },
-    addCart: async (parent, { itemName, price, imgurl, userName }, context) => {
+    addCart: async (parent, { itemName, price, imgurl, userName, userID }) => {
       // console.log('Context: ', React.context)
-      const cart = await Cart.create(
-        {
-          itemName,
-          price,
-          imgurl,
-          userName
-        });
-      // await User.findOneAndUpdate(
-      //   { _id: context._id },
-      //   { $addToSet: { userCart: cart._id } }
-      // );
-      return cart;
+      const cart = await Cart.create({
+        itemName,
+        price,
+        imgurl,
+        userName
+      });
+
+      const updateUser = await User.findOneAndUpdate(
+        { _id: userID },
+        { $addToSet: { userCart: cart._id } }
+      );
+       
+      console.log('CART: ', cart, 'updatedUser: ', updateUser);
+      return cart
     },
     // throw new AuthenticationError('You need to be logged in!');
     addUser: async (parent, { name, email, password }) => {
@@ -67,7 +69,7 @@ const resolvers = {
     removeCart: async (parent, { _id }) => {
       const cartItemDel = await Cart.findOneAndDelete({ _id: _id });
       // console.log('inside resolver, query: ', cartItemDel)
-      if(cartItemDel) {
+      if (cartItemDel) {
         return cartItemDel;
       }
       console.log('error deleting')

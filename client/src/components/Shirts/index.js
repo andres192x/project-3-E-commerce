@@ -13,14 +13,17 @@ const ShirtList = ({ shirts, title }) => {
     const cost = e.target.parentNode.dataset.price
     const img = e.target.parentNode.dataset.img
     const username=Auth.getProfile().data.name
+    const userID = Auth.getProfile().data._id
     console.log('USERNAME: ', username)
+    console.log('USERID: ', userID)
     try {
       const addingToCart = await addToCart({
         variables: {
           itemName: name,
           price: cost,
           imgurl: img,
-          userName: username
+          userName: username,
+          userID: userID
         }
       })
       console.log(addingToCart)
