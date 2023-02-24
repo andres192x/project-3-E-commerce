@@ -42,13 +42,6 @@
         "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/its-not-a-bug-its-a-feature-tshirt-black/3.webp"
     },
     {
-        "itemName": "hello-world",
-        "category": "shirtHoodie",
-        "inStock": true,
-        "price": "30",
-        "imgurl": "https://codeswear.nyc3.cdn.digitaloceanspaces.com/tshirts/hello-world-tshirt-black/3.webp"
-    },
-    {
         "itemName": "sleep not found",
         "category": "shirtHoodie",
         "inStock": true,
