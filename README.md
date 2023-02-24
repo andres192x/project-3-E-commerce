@@ -5,6 +5,9 @@ E-commerce webpages are crucial for business' to help facilitate sales and organ
 
 A MERN(MongoDB, Express, React, Node) Stack approach was used to develop this webpage as this enables scalability for future improvements. 
 
+Deployed URL:
+https://on-code-e-commerce.herokuapp.com/
+
 ## 📋 Table of Contents
 
 - [Libraries Used](#libraries-used-📚)
@@ -56,6 +59,11 @@ To invoke the app navigate to the corresponding directory and run:
 ```
 npm run develop
 ```
+
+
+![homepage](./client/src/Assets/homepage%20Large.jpeg)
+
+![collections](./client/src/Assets/collections%20Large.jpeg)
 
 ## License
 
