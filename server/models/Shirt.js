@@ -4,7 +4,6 @@ const shirtSchema = new Schema({
   itemName: {
     type: String,
     required: true,
-    unique: true,
     trim: true,
   },
   size:
